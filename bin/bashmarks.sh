@@ -35,13 +35,29 @@ bookmark (){
     echo 'Invalid name, please provide a name for your bookmark. For example:'
     echo '  bookmark foo'
   else
-    bookmark="`pwd`|$bookmark_name" # Store the bookmark as folder|name
+    # Store the bookmark as folder|name
+    bookmark="`pwd`|$bookmark_name"
 
-    if [[ -z `grep "$bookmark" $bookmarks_file` ]]; then
+    if [[ -z `grep "|$bookmark_name" $bookmarks_file` ]]; then
       echo $bookmark >> $bookmarks_file
       echo "Bookmark '$bookmark_name' saved"
     else
-      echo "Bookmark already existed"
+      echo "Bookmark '$bookmark_name' already exists. Replace it? (y or n)"
+      while read replace
+      do
+        if [[ $replace = "y" ]]; then
+          # Delete existing bookmark
+          sed "/.*|$bookmark_name/d" $bookmarks_file > ~/.tmp && mv ~/.tmp $bookmarks_file
+          # Save new bookmark
+          echo $bookmark >> $bookmarks_file
+          echo "Bookmark '$bookmark_name' saved"
+          break
+        elif [[ $replace = "n" ]]; then
+          break
+        else
+          echo "Please type 'y' or 'n'"
+        fi
+      done
     fi
   fi
 } 
