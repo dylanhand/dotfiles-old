@@ -1,0 +1,7 @@
+[user]
+	name = Dylan Hand
+	email = dylan.hand@gmail.com
+[http]
+	sslVerify = false
+[color]
+	ui = true
