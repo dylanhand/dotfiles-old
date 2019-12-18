@@ -1,5 +1,4 @@
 " -----------------------------------------------------------------------------  
-"
 " |                            VIM Settings                                   |
 " |                   (see gvimrc for gui vim settings)                       |
 " |                                                                           |
@@ -18,7 +17,7 @@
 " |                                                                           |
 " |   ,i = toggle invisibles                                                  |
 " |   ,c = toggle comments                                                    |
-" |   ,F2 = toggle paste "                                                     |
+" |   ,F2 = toggle paste "                                                    |
 " |                                                                           |
 " |   enter and shift-enter = adds a new line after/before the current line   |
 " |                                                                           |
@@ -28,11 +27,18 @@
 " | Put machine/user specific settings in ~/.vimrc.local                      |
 " -----------------------------------------------------------------------------  
 
-
 set nocompatible
 let mapleader = ","
+imap kj <Esc>
+imap jk <Esc>
+imap kk <Esc>
 imap jj <Esc> " Professor VIM says '87% of users prefer jj over esc', jj abrams disagrees
 
+" ,r = save and run the current file
+:nnoremap <leader>. :w<cr>:!%:p<cr>
+
+" ,s = save the current file
+:nnoremap <leader>s :w<cr>
 
 " Tabs ************************************************************************
 "set sta " a <Tab> in an indent inserts 'shiftwidth' spaces
@@ -108,7 +114,7 @@ match LongLineWarning '\%120v.*' " Error format when a line is longer than 120
 
 
 " Line Wrapping ***************************************************************
-set nowrap
+set wrap
 set linebreak  " Wrap at word
 
 
