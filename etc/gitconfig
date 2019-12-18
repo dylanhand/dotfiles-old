@@ -5,3 +5,7 @@
 	sslVerify = false
 [color]
 	ui = true
+[core]
+	excludesfile = /Users/dylanhand/.gitignore
+[commit]
+	template = /Users/dylanhand/.stCommitMsg
