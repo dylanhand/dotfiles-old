@@ -1,3 +1,4 @@
+#!/bin/bash
 # Bashmarks is a simple set of bash functions that allows you to bookmark 
 # folders in the command-line.
 # 
