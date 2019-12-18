@@ -32,7 +32,7 @@ let mapleader = ","
 imap kj <Esc>
 imap jk <Esc>
 imap kk <Esc>
-imap jj <Esc> " Professor VIM says '87% of users prefer jj over esc', jj abrams disagrees
+imap jj <Esc>
 
 " ,r = save and run the current file
 :nnoremap <leader>. :w<cr>:!%:p<cr>
