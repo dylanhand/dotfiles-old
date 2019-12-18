@@ -23,6 +23,7 @@ else
   # vim
   link ~/cl/etc/vim/vimrc ~/.vimrc
   link ~/cl/etc/vim/gvimrc ~/.gvimrc
+  link ~/cl/etc/vim/xvimrc ~/.xvimrc
   link ~/cl/etc/vim ~/.vim
 
   # git
@@ -35,6 +36,7 @@ else
   link ~/cl/etc/autotest ~/.autotest
   link ~/cl/etc/irbrc ~/.irbrc
   link ~/cl/etc/ssh_config ~/.ssh/config
+  link ~/cl/etc/bookmarks ~/.bookmarks
 
   source ~/.bash_profile
 
