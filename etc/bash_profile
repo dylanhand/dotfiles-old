@@ -57,3 +57,5 @@ echo -ne "Server time is: "; date
 # in this order:
 #     bashrc
 #     .bashrc
+
+export PATH="$HOME/.cargo/bin:$PATH"
