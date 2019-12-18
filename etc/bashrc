@@ -11,6 +11,11 @@ else
 fi
 
 
+# Dylan added alias -----------------------------------------------
+
+alias mm='bundle exec middleman'
+alias jek='bundle exec jekyll'
+alias lla='ls -al'
 
 # Colors ----------------------------------------------------------
 export TERM=xterm-color
